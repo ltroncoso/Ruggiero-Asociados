@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@font-face {
+    font-family: 'DIN Next Light';
+    src: url('/assets/fonts/din-next-light.woff2') format('woff2'),
+         url('/assets/fonts/din-next-light.woff') format('woff'),
+         url('/assets/fonts/din-next-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos para el ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 40px; /* Ajusta la distancia desde el borde inferior */
+    right: 40px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 1000; /* Asegúrate de que el ícono esté por encima de otros elementos */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+  }
+  
+  .whatsapp-icon img {
+    width: 70px; /* Tamaño del ícono */
+    height: 70px; /* Tamaño del ícono */
+  }
+
+  @media (max-width: 991.98px) {
+    .whatsapp-icon img {
+    width: 50px; /* Tamaño del ícono */
+    height: 50px; /* Tamaño del ícono */
+  }
+}
+
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+  }

@@ -1,0 +1,62 @@
+<!-- Sección imagen fondo -->
+<div class="contenedor">
+    <div class="d-flex align-items-center justify-content-center container" style="height: 100%;">
+      <div class="col-12 col-lg-12 texto-servicio text-center">
+        <p class="texto-sevice2"></p>
+        <p class="texto-sevice">CONTACTO</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row" style="margin-top: 7%; margin-bottom: 7%;">
+    <!-- 2 columnas vacías a la izquierda -->
+    <div class="d-none d-lg-block col-lg-3"></div>
+  
+    <div class="col-12 col-lg-6">
+      <div class="row align-items-stretch justify-content-between">
+        <div class="col-12 col-lg-6 d-flex flex-column text-start">
+          <div class="col-8 col-lg-10 offset-lg-0 offset-2">
+            <p class="texto-contacto">
+              Ruggiero & Asociados ofrece soluciones en contrataciones públicas para tu empresa.
+              Nuestro talentoso equipo está listo para asesorarte en los procedimientos de selección que
+              quieras participar.
+            </p>
+          </div>
+        </div>
+        <div class="col-10 col-lg-6 d-flex flex-column text-center mx-auto">
+          <div class="container mt-4 mt-lg-2">
+            <form (ngSubmit)="enviarFormulario(form)" #form="ngForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" placeholder="Nombre" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Email" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" name="telefono" [(ngModel)]="telefono" placeholder="Teléfono" required>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" name="mensaje" [(ngModel)]="mensaje" rows="5" placeholder="Escriba su mensaje aquí" required></textarea>
+                  </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-primary" [disabled]="cargando">Enviar</button>
+              </div>
+            </form>
+            <!-- Rueda de carga -->
+            <div *ngIf="cargando" class="spinner-border" role="status">
+              <span class="visually-hidden">Cargando...</span>
+            </div>
+            <!-- Mensaje de éxito -->
+            <div *ngIf="mensajeExito" class="alert alert-success mt-3">
+              ¡Correo enviado exitosamente!
+            </div>
+            <!-- Mensaje de error -->
+            <div *ngIf="mensajeError" class="alert alert-danger mt-3">
+              Hubo un error al enviar el correo. Por favor, intentá de nuevo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,16 @@
+.item{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.item:hover{
+    color: rgb(144, 144, 112);
+    font-size: 22px;
+}
+
+.barra{
+    background-color: rgb(105, 12, 12,0.95);
+}
+

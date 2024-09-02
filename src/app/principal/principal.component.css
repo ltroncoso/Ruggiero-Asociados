@@ -1,0 +1,252 @@
+@keyframes fadeInPage {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Opcional: hace que las tarjetas suban desde abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%); /* Comienza desde arriba de la pantalla y centrado en X */
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0); /* Termina en su posición original, centrado en X */
+    opacity: 1;
+  }
+}
+
+
+body {
+  opacity: 0;
+  animation: fadeInPage 1.5s ease-in forwards; /* Duración de 1.5 segundos */
+}
+
+
+.imagen-con-texto {
+    position: relative;
+    text-align: center; /* Centra el texto debajo de la imagen */
+    margin: 0px 0; /* Espacio alrededor del contenedor */
+  }
+
+.imagenprincipal{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: blur(5px) brightness(0.2); 
+}
+
+.texto-imagen {
+    position: absolute; /* Posiciona el texto sobre la imagen si deseas */
+    bottom: 250px; /* Ajusta la distancia desde el fondo de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Cambia el color del texto según el fondo */
+    background: rgba(0, 0, 0, 0.0); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados opcional */
+
+    opacity: 0;
+    animation: slideDown 1.5s ease-out forwards; /* Animación de caída */
+  }
+  
+  .titulo-imagen {
+    font-size: 3em; /* Ajusta el tamaño del título */
+    margin: 0;
+  }
+  
+  .descripcion-imagen {
+    font-size: 1.5em; /* Ajusta el tamaño de la descripción */
+    margin: 10px 0 0; /* Espacio superior entre el título y la descripción */
+  }
+
+  .nosotros{
+    position:relative;
+    text-align:center;
+  }
+
+  .texto-nosotros{
+    position:relative;
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+
+  .titulo-nosotros{
+    font-size:2.1em;
+    color: rgb(105, 12, 12);
+    font-weight: 700;
+  }
+
+  .texto-p-nosotros{
+    color: black;
+    font-size: 1.2em;
+    margin: 25px 0px;
+    font-weight: 500;
+    text-align: justify;
+  }
+
+  .servicios{
+    position:relative;
+    text-align:center;
+    background-color: rgb(105, 12, 12);
+    margin: 0;
+  padding: 0;
+  }
+
+  .texto-servicios{
+    position:relative;
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+
+  .titulo-servicio{
+    font-size:2.1em;
+    color: white;
+    font-weight:600;
+  }
+
+  .espacio-tarjetas{
+    margin-top: 50px;
+  }
+
+  .tarjeta{
+    width: 230px;
+    height: 250px;
+   
+    opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  transform: translateY(20px); /* Opcional: hace que las tarjetas suban desde abajo */
+
+  transition: scale 0.3s ease, box-shadow 0.3s ease;
+
+  }
+
+
+.tarjeta:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.tarjeta:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.tarjeta:nth-child(3) {
+  animation-delay: 2.5s;
+}
+
+.tarjeta:nth-child(4) {
+  animation-delay: 3.5s;
+}
+
+  .tarjeta:hover {
+    scale: 110%; /* Aumenta el tamaño de la tarjeta en un 12% */
+    box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.6); /* Aumenta la sombra al hacer hover */
+  }
+
+
+
+/* Para pantallas pequeñas, mostrar una tarjeta por fila centrada */
+@media (max-width: 640px) {
+  .row.justify-content-between {
+    display: block;
+  }
+
+  .tarjeta {
+    margin: 50px auto; /* Centrando las tarjetas */
+  }
+}
+.card-title{
+  color: beige;
+  font-size: 80px;
+  margin: 25px 0px;
+}
+
+.card-text{
+  color: beige;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card{
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3) 0,
+    rgba(246, 239, 239, 0.351) 1px,
+    transparent 2px,
+    transparent 10px
+  );
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 10px; /* Opcional: para esquinas redondeadas */
+  padding: 0px; /* Opcional: para agregar espacio interior */
+}
+
+.btn{
+  background-color: rgb(144, 144, 112);
+  color: beige;
+  font-weight: 600;
+  margin-top: 50px;
+  font-size: 18px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del botón */
+  display: block; /* Asegura que el enlace ocupe el espacio del botón */
+  width: 100%; /* Asegura que el enlace ocupe el ancho completo del botón */
+  height: 100%; /* Asegura que el enlace ocupe la altura completa del botón */
+}
+
+
+.btn:hover{
+  background-color: rgb(68, 68, 64);
+  color: black;
+}
+
+
+/*Imagen fija*/
+
+.imagen-fondo {
+  position: relative;
+  background-color: black;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../../assets/Imagenes/reunion.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 30em;
+  margin: 0;
+  padding: 0;
+}
+
+.texto-img-fija{
+  color: white;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: justify;
+}
+
+
+/*Seccion contactanos*/
+
+.btn-2{
+ font-size: 18px;
+ box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+
+

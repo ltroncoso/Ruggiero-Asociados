@@ -1,0 +1,68 @@
+.contenedor{
+    position: relative;
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.97),rgba(0,0,0,0.90)),url("../../assets/Imagenes/libros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding: none;
+}
+
+.row{
+  margin-bottom: 0px;
+}
+
+.img{
+    filter: opacity(50%) contrast(100%);
+    height: 240px;
+    object-fit: cover; /* Cubre completamente el área del contenedor */
+    object-position: top; /* Recorta la parte inferior posicionando la imagen desde la parte superior */
+    /* Recorte adicional */
+    margin-bottom: -25px; /* Recorta visualmente 20px de la parte inferior */
+}
+
+.separador {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0px 15% 15px 15%;
+  }
+  
+  @media (min-width: 992px) {
+    .separador {
+      display: none;
+    }
+  }
+
+/** redes sociales*/
+
+.titulo-redes{
+    color: white;
+    filter: opacity(60%);
+    margin-bottom: 10px;
+}
+
+.item-redes{
+    color: white;
+    filter: opacity(70%);
+    font-size:18px;
+    text-decoration: none;
+    text-align: start;
+}
+
+.linke{
+  margin: 0px 0px 0px 0px;
+}
+
+.desarrollado-por {
+    color: #ffffffa9; /* Color del enlace */
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: 300; /* Opcional: texto en negrita */
+    margin-left: 2%;
+    margin-top: 0px;
+  }
+  
+  .desarrollado-por:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el mouse */
+  }
