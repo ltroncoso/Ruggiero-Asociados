@@ -33,6 +33,11 @@
               "glob": "google8d935e8728a4f0a5.html",
               "input": "src/assets",
               "output": "."
+            },
+            {
+              "glob": "sitemap.xml",
+              "input": "src/assets",
+              "output": "."
             }],
             "styles": [
               "src/styles.css",
